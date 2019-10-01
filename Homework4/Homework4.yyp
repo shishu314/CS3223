@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "a92e7e40-c67d-4341-a7c9-b77465543ef7",
+            "Value": {
+                "id": "b1a91ade-db0e-4612-849f-4d9d91fdf62c",
+                "resourcePath": "objects\\obj_drawColorChanger\\obj_drawColorChanger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b09487fb-df68-42df-9d22-bb4cae65651f",
             "Value": {
                 "id": "a6ba626d-d2a4-41df-9964-7b83f50905e9",
