@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "5ec0785e-3598-41fe-b55f-b7f9ffb465d8",
+            "Value": {
+                "id": "324e39ed-a54f-4634-bffd-bea5104aa632",
+                "resourcePath": "sprites\\spr_playerWalkLeft\\spr_playerWalkLeft.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "614344ee-77fc-4406-93b8-cd1b5094e23d",
             "Value": {
                 "id": "452daf1b-a59a-4942-906a-cecab07d9d02",
