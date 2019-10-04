@@ -138,7 +138,7 @@
             "Key": "5ec0785e-3598-41fe-b55f-b7f9ffb465d8",
             "Value": {
                 "id": "324e39ed-a54f-4634-bffd-bea5104aa632",
-                "resourcePath": "sprites\\spr_playerWalkLeft\\spr_playerWalkLeft.yy",
+                "resourcePath": "sprites\\spr_playerWalkRight\\spr_playerWalkRight.yy",
                 "resourceType": "GMSprite"
             }
         },
