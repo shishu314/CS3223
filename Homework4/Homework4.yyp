@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00ad6013-935f-41bd-9f61-c2f46f081a64",
+            "Value": {
+                "id": "0885489d-6419-406b-929c-b9354fb4a4d7",
+                "resourcePath": "objects\\obj_outOfBounds\\obj_outOfBounds.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "01ac03ba-3b55-4354-98b0-32d0d5ec1606",
             "Value": {
                 "id": "2085e8c4-e22e-475c-8a76-35f841eb97e0",

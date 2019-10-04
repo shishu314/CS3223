@@ -30,6 +30,8 @@ if(keyboard_check(ord("S"))) {
 	image_xscale = 1;
 }
 
+event_inherited();
+
 if(!isMoving) {
 	image_index = 0;
 }
