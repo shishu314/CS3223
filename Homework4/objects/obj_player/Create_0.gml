@@ -2,5 +2,5 @@
 // You can write your code in this editor
 event_inherited();
 isMoving = false;
-moveSpeed = 4;
+moveSpeed = 3;
 bulletSpeed = 5;
