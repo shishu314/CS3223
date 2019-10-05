@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+#region Movement
 isMoving = false;
-
 if(keyboard_check(ord("A"))) {
 	x -= moveSpeed;
 	isMoving = true;
@@ -31,6 +31,30 @@ if(keyboard_check(ord("S"))) {
 }
 
 event_inherited();
+
+#endregion
+
+#region Bullet
+if(bulletSpawnTimer >= bulletSpawnTime) {
+	bulletDirection = "";
+	if(keyboard_check(vk_up)) {
+		bulletDirection += "Top";
+	}
+
+	if(keyboard_check(vk_down)) {
+		if(string_pos("Top", bulletDirection) == 0) {
+			bulletDirection += "Bot";
+		}
+	}
+
+	if(bulletDirection != "") {
+		SpawnBullet(bulletDirection, x, y, bulletSpeed);
+		bulletSpawnTimer = 0;
+	}
+} else {
+	++bulletSpawnTimer;
+}
+#endregion
 
 if(!isMoving) {
 	image_index = 0;

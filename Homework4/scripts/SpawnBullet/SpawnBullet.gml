@@ -40,4 +40,6 @@ switch(_direction){
 		bullet.xSpeed = cos(7*pi/4) * _bulletSpeed;
 		bullet.rotation = -135;
 		break;
+	default:
+		break;
 }
