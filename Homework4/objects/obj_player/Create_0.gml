@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 isMoving = false;
-moveSpeed = 1.5;
+moveSpeed = 3;
 bulletSpeed = 10;
 bulletDirection = "";
 bulletSpawnTime = 0.2 * room_speed;

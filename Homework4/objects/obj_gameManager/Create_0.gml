@@ -5,3 +5,4 @@ global.borderRight = 19*room_width/20;
 global.borderTop = 3*room_height/20;
 global.borderBot = 19*room_height/20;
 global.borderWidth = 5;
+global.gruntMovementTime = 0.5 * room_speed;

@@ -5,3 +5,7 @@ if(room == StartScreen || room == InstructionScreen) {
 		NextLevel();
 	}
 }
+
+if(room == Level1) {
+	global.gruntMovementTime -= 0.025;
+}
