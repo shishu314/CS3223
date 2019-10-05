@@ -37,13 +37,23 @@ event_inherited();
 #region Bullet
 if(bulletSpawnTimer >= bulletSpawnTime) {
 	bulletDirection = "";
-	if(keyboard_check(vk_up)) {
+	if(keyboard_check(ord("I"))) {
 		bulletDirection += "Top";
 	}
 
-	if(keyboard_check(vk_down)) {
+	if(keyboard_check(ord("K"))) {
 		if(string_pos("Top", bulletDirection) == 0) {
 			bulletDirection += "Bot";
+		}
+	}
+
+	if(keyboard_check(ord("J"))) {
+		bulletDirection += "Left";
+	}
+	
+	if(keyboard_check(ord("L"))) {
+		if(string_pos("Left", bulletDirection) == 0) {
+			bulletDirection += "Right";
 		}
 	}
 

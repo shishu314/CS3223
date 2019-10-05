@@ -12,7 +12,7 @@ if (room == StartScreen) {
 
 if (room == InstructionScreen) {
 	draw_set_color(c_white);
-	draw_text_transformed(room_width / 2, 2*room_height / 5, "WASD to move, arrow to shoot", 2, 2, 0);
+	draw_text_transformed(room_width / 2, 2*room_height / 5, "WASD to move, IJKL to shoot", 2, 2, 0);
 	draw_text_transformed(room_width / 2, 3*room_height / 5, "Press Space to Continue", 2, 2, 0);
 }
 
