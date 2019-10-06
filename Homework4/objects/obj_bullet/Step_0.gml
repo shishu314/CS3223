@@ -17,5 +17,6 @@ var enemy = collision_rectangle(TopLeftX, TopLeftY, BotRightX, BotRightY, obj_gr
 if(enemy) {
 	instance_destroy(enemy);
 	instance_destroy();
+	score += 100;
 }
 #endregion

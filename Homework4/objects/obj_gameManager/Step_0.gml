@@ -3,6 +3,8 @@
 if(room == StartScreen || room == InstructionScreen) {
 	if(keyboard_check_pressed(vk_space)) {
 		NextLevel();
+		score = 0;
+		lives = 3;
 	}
 }
 
