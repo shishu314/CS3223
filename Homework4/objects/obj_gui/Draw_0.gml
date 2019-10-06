@@ -22,4 +22,6 @@ if (room == Level1) {
 	draw_rectangle(global.borderLeft, global.borderBot, global.borderRight, global.borderBot+global.borderWidth, false);
 	draw_rectangle(global.borderLeft-global.borderWidth, global.borderTop, global.borderLeft, global.borderBot, false);
 	draw_rectangle(global.borderRight, global.borderTop, global.borderRight+global.borderWidth, global.borderBot, false);
+	event_inherited();
+	draw_text_transformed((global.borderLeft+room_width/2)/2, global.borderTop/2, string(score), 2, 2, 0);
 }
