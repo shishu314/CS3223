@@ -7,3 +7,5 @@ bulletSpeed = 10;
 bulletDirection = "";
 bulletSpawnTime = 0.2 * room_speed;
 bulletSpawnTimer = bulletSpawnTime;
+x = room_width/2;
+y = room_height/2;

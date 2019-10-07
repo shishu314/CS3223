@@ -16,7 +16,7 @@ if (room == InstructionScreen) {
 	draw_text_transformed(room_width / 2, 3*room_height / 5, "Press Space to Continue", 2, 2, 0);
 }
 
-if (room == Level1) {
+if (room == Level1 || room == Level2 || room == Level3) {
 	draw_set_color(c_red);
 	draw_rectangle(global.borderLeft, global.borderTop, global.borderRight, global.borderTop-global.borderWidth, false);
 	draw_rectangle(global.borderLeft, global.borderBot, global.borderRight, global.borderBot+global.borderWidth, false);
@@ -24,4 +24,11 @@ if (room == Level1) {
 	draw_rectangle(global.borderRight, global.borderTop, global.borderRight+global.borderWidth, global.borderBot, false);
 	event_inherited();
 	draw_text_transformed((global.borderLeft+room_width/2)/2, global.borderTop/2, string(score), 2, 2, 0);
+}
+
+if(room == EndScreen) {
+	event_inherited();
+	draw_text_transformed(room_width / 2, 1*room_height / 5, "Game Over!", 2, 2, 0);
+	draw_text_transformed(room_width / 2, 2*room_height / 5, "Score: "+string(score), 2, 2, 0);
+	draw_text_transformed(room_width / 2, 3*room_height / 5, "Press Space to Restart", 2, 2, 0);
 }
