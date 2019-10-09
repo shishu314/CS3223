@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "b7eb7af9-71ca-4e5e-b13c-1bd230242c88",
+            "Value": {
+                "id": "18a26df9-c6ac-4703-987a-e567f6192f12",
+                "resourcePath": "objects\\obj_hulk\\obj_hulk.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "be96231b-2a4e-4785-95b5-574f7d543152",
             "Value": {
                 "id": "bf6612e9-472a-46ef-a80c-7fd4e4381b3f",
