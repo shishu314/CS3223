@@ -3,5 +3,5 @@
 xSpeed = 0;
 ySpeed = 0;
 rotation = 0;
-bulletImpact = 3;
+bulletImpact = 3.5;
 event_inherited();
