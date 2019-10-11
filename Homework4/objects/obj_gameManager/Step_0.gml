@@ -13,4 +13,7 @@ if(room == Level1 || room == Level2 || room == Level3) {
 	if(instance_nearest(x, y, obj_grunt) == noone) {
 		NextLevel();
 	}
+	if(lives <= 0){
+		room_goto(EndScreen);
+	}
 }

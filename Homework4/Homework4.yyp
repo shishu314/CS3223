@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "64fb824d-da27-44a5-872c-f048688d7f6a",
+            "Value": {
+                "id": "b02255be-a203-4242-a08c-dc3cef876da5",
+                "resourcePath": "scripts\\Die\\Die.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "671fdb52-be80-412b-8993-4441a1234b8c",
             "Value": {
                 "id": "aba03722-47ab-4b90-8c7a-d1aee0838c89",
@@ -394,7 +402,8 @@
     "script_order": [
         "8e553d29-b19b-4392-a051-c61f795685d1",
         "735a743e-e219-480a-8fbd-be42364465d4",
-        "84f176fc-8e62-45c1-a8aa-30e26bdaabe4"
+        "84f176fc-8e62-45c1-a8aa-30e26bdaabe4",
+        "64fb824d-da27-44a5-872c-f048688d7f6a"
     ],
     "tutorial": ""
 }

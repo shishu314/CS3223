@@ -66,6 +66,15 @@ if(bulletSpawnTimer >= bulletSpawnTime) {
 }
 #endregion
 
+#region Enemy
+if(collision_circle(x, y, sprite_width/4, obj_grunt, false, false)){
+	Die();
+}
+
+if(collision_circle(x, y, sprite_width/4, obj_hulk, false, false)){
+	Die();
+}
+#endregion
 if(!isMoving) {
 	image_index = 0;
 }
