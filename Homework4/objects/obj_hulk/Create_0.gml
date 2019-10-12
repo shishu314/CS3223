@@ -5,3 +5,5 @@ currDirection = GenRandomDirection();
 moveSpeed = 2.5;
 moveTime = 3 * room_speed;
 moveTimer = 0;
+initialX = x;
+initialY = y;
