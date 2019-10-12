@@ -23,7 +23,11 @@ if (room == Level1 || room == Level2 || room == Level3) {
 	draw_rectangle(global.borderLeft-global.borderWidth, global.borderTop, global.borderLeft, global.borderBot, false);
 	draw_rectangle(global.borderRight, global.borderTop, global.borderRight+global.borderWidth, global.borderBot, false);
 	event_inherited();
-	draw_text_transformed((global.borderLeft+room_width/2)/2, global.borderTop/2, string(score), 2, 2, 0);
+	var center = (global.borderLeft+room_width/2)/2;
+	draw_text_transformed(center, global.borderTop/2, string(score), 2, 2, 0);
+	for(var i = 0; i < lives - 1; i+=1) {
+		draw_sprite(spr_lives, 0, center + (i+1)*64, global.borderTop/2);
+	}
 }
 
 if(room == EndScreen) {
