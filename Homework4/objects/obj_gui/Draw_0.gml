@@ -36,3 +36,10 @@ if(room == EndScreen) {
 	draw_text_transformed(room_width / 2, 2*room_height / 5, "Score: "+string(score), 2, 2, 0);
 	draw_text_transformed(room_width / 2, 3*room_height / 5, "Press Space to Restart", 2, 2, 0);
 }
+
+if(room == WinScreen) {
+	event_inherited();
+	draw_text_transformed(room_width / 2, 1*room_height / 5, "You Win!", 2, 2, 0);
+	draw_text_transformed(room_width / 2, 2*room_height / 5, "Score: "+string(score), 2, 2, 0);
+	draw_text_transformed(room_width / 2, 3*room_height / 5, "Press Space to Restart", 2, 2, 0);
+}

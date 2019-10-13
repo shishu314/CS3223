@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1acfc789-d0e7-4240-800b-d4401f3094a1",
+            "Value": {
+                "id": "d3278b74-ece8-4ab8-b0c0-8272de7c05d0",
+                "resourcePath": "rooms\\WinScreen\\WinScreen.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "2257021d-70b5-4604-9243-e60ecb821ec4",
             "Value": {
                 "id": "e2c49fb8-52c6-4d83-981a-0ab28681a97a",

@@ -20,9 +20,9 @@ if(room == Level2) {
 }
 
 if(room == Level3) {
-	room_goto(EndScreen);
+	room_goto(WinScreen);
 }
 
-if(room == EndScreen) {
+if(room == EndScreen || room == WinScreen) {
 	room_goto(StartScreen);
 }
