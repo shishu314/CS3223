@@ -20,10 +20,10 @@ if(x+sprite_width/2 > global.borderRight){
 	wasOutOfBounds = true;
 }
 if(y-sprite_height/2 < global.borderTop){
-	y = global.borderTop + sprite_width/2;
+	y = global.borderTop + sprite_height/2;
 	wasOutOfBounds = true;
 }
 if(y+sprite_height/2 > global.borderBot){
-	y = global.borderBot - sprite_width/2;
+	y = global.borderBot - sprite_height/2;
 	wasOutOfBounds = true;
 }
