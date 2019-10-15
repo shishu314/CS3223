@@ -1,0 +1,1 @@
+spawnprotection = false
