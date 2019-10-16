@@ -18,17 +18,11 @@ if checkenemy != noone {
 
 // GROUND COLLISIONS
 
-checkplat = instance_position(x, y+(sprite_height/2), objPlatform)
-if(checkplat == noone) {
-	checkplat = instance_position(x+sprite_width/3, y+(sprite_height/2), objPlatform)
-}
-if(checkplat == noone) {
-	checkplat = instance_position(x-sprite_width/3, y+(sprite_height/2), objPlatform)
-}
+checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y+sprite_height/2, objPlatform, false, false);
 if (checkplat != noone) {
 	grav = gravstart
 	fallspeed = 0
-	y = checkplat.y-(sprite_height/2)
+	y = checkplat.y-checkplat.sprite_height/2-(sprite_height/2)
 } else {
 	grounded = false
 }
@@ -38,14 +32,14 @@ x += horizspeed
 
 // BONK (UP)
 
-checkplat = instance_position(x, y-(sprite_height/2 + 4), objPlatform)
-if(checkplat == noone) {
-	checkplat = instance_position(x+sprite_width/3, y-(sprite_height/2 + 4), objPlatform)
+checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y-sprite_height/2, objPlatform, false, false);
+if checkplat != noone {
+	grav = -grav
+	fallspeed = -fallspeed
+	y = checkplat.y+checkplat.sprite_height/2+sprite_height/2
 }
-if(checkplat == noone) {
-	checkplat = instance_position(x-sprite_width/3, y-(sprite_height/2 + 4), objPlatform)
-}
-if y < sprite_height or checkplat != noone {
+
+if y < sprite_height/2 {
 	grav = -grav
 	fallspeed = -fallspeed
 }
