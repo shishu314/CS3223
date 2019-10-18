@@ -22,6 +22,16 @@ if checkenemy != noone {
 			multiplier *= -1;
 			checkenemy.fallspeed *= -1;
 			checkenemy.horizspeed *= -1;
+			if(x > checkenemy.x) {
+				x = checkenemy.x + checkenemy.sprite_width/2 + sprite_width/2;
+			} else if(x < checkenemy.x){
+				x = checkenemy.x - checkenemy.sprite_width/2 - sprite_width/2;
+			}
+			if(y > checkenemy.y) {
+				y = checkenemy.y + checkenemy.sprite_height/2 + sprite_height/2;
+			} else if(y < checkenemy.y){
+				x = checkenemy.y - checkenemy.sprite_height/2 - sprite_height/2;
+			}
 		}
 	}
 }
