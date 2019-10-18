@@ -21,9 +21,7 @@ if checkenemy != noone {
 			fallspeed *= - 1;
 			multiplier *= -1;
 			checkenemy.fallspeed *= -1;
-			if(multiplier ^ checkenemy.horizspeed >= 0) {
-				checkenemy.horizspeed *= -1;
-			}
+			checkenemy.horizspeed *= -1;
 		}
 	}
 }
