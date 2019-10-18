@@ -7,15 +7,6 @@ if x < 0 {
 	x = room_width
 }
 
-// KILLING
-checkenemy = collision_rectangle(x - sprite_width/3, y - sprite_height/3, x + sprite_width/3, y + sprite_height/3, objPlayer, false, false)
-if checkenemy != noone {
-	if checkenemy.y < y {
-		global.PLAYERSCORE += 150
-		instance_destroy()
-	}
-}
-
 // GROUND COLLISIONS
 
 checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y+sprite_height/2, objPlatform, false, false);
