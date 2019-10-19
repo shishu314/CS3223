@@ -1,6 +1,5 @@
 fallspeed = 0
 grounded = false
-stunned = false
 
 alarmwait = 0.25
 alarm[0] = -2
