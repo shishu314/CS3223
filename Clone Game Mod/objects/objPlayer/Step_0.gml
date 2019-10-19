@@ -11,10 +11,10 @@ if x < 0 {
 checkenemy = collision_rectangle(x - sprite_width/3, y - sprite_height/3, x + sprite_width/3, y + sprite_height/3, objUpEnemy, false, false)
 if checkenemy != noone {
 	if(!spawnprotection) {
-		if checkenemy.y < y - sprite_height/3 {
+		if checkenemy.y + sprite_height/3 < y - sprite_height/3 {
 			instance_destroy()
 			global.PLAYERLIVES -= 1
-		} else if checkenemy.y - sprite_height/3 > y{
+		} else if checkenemy.y - sprite_height/3 > y - sprite_height/3{
 			global.PLAYERSCORE += 150
 			instance_destroy(checkenemy)
 		} else {
