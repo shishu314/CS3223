@@ -30,7 +30,7 @@ if checkenemy != noone {
 			if(y > checkenemy.y) {
 				y = checkenemy.y + checkenemy.sprite_height/2 + sprite_height/2;
 			} else if(y < checkenemy.y){
-				x = checkenemy.y - checkenemy.sprite_height/2 - sprite_height/2;
+				y = checkenemy.y - checkenemy.sprite_height/2 - sprite_height/2;
 			}
 		}
 	}
@@ -60,7 +60,7 @@ if checkenemy != noone {
 	if(y > checkenemy.y) {
 		y = checkenemy.y + checkenemy.sprite_height/2 + sprite_height/2;
 	} else if(y < checkenemy.y){
-		x = checkenemy.y - checkenemy.sprite_height/2 - sprite_height/2;
+		y = checkenemy.y - checkenemy.sprite_height/2 - sprite_height/2;
 	}
 }
 #endregion
