@@ -1,4 +1,4 @@
-// SCREEN WRAPPING
+#region SCREEN WRAPPING
 
 if x > room_width {
 	x = 0
@@ -6,8 +6,8 @@ if x > room_width {
 if x < 0 {
 	x = room_width
 }
-
-// GROUND COLLISIONS
+#endregion
+#region GROUND COLLISIONS
 
 checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y+sprite_height/2, objPlatform, false, false);
 if (checkplat != noone) {
@@ -17,11 +17,11 @@ if (checkplat != noone) {
 } else {
 	grounded = false
 }
-
-// MOVE
+#endregion
+#region MOVE
 x += horizspeed
-
-// BONK (UP)
+#endregion
+#region BONK (UP)
 
 checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y-sprite_height/2, objPlatform, false, false);
 if checkplat != noone {
@@ -34,8 +34,8 @@ if y < sprite_height/2 {
 	grav = -grav
 	fallspeed = -fallspeed
 }
-
-// BONK (LEFT)
+#endregion
+#region BONK (LEFT)
 
 checkplat = collision_rectangle(x - sprite_height/3, y - sprite_height/3, x - sprite_height/3, y + sprite_height/3, objPlatform, false, false)
 if checkplat != noone and multiplier < 0 {
@@ -43,8 +43,8 @@ if checkplat != noone and multiplier < 0 {
 	fallspeed = 0
 	multiplier = 1
 }
-
-// BONK (RIGHT)
+#endregion
+#region BONK (RIGHT)
 
 checkplat = collision_rectangle(x + sprite_height/3, y - sprite_height/3, x + sprite_height/3, y + sprite_height/3, objPlatform, false, false)
 if checkplat != noone and multiplier > 0 {
@@ -52,9 +52,8 @@ if checkplat != noone and multiplier > 0 {
 	fallspeed = 0
 	multiplier = -1
 }
-
-
-// GRAVITY
+#endregion
+#region GRAVITY
 
 if !grounded {
 	if grav < gravstart {
@@ -63,3 +62,4 @@ if !grounded {
 	y += fallspeed
 	fallspeed += grav
 }
+#endregion

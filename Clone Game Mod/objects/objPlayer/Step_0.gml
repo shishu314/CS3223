@@ -1,4 +1,4 @@
-// SCREEN WRAPPING
+#region SCREEN WRAPPING
 
 if x > room_width {
 	x = 0
@@ -6,9 +6,9 @@ if x > room_width {
 if x < 0 {
 	x = room_width
 }
-
-// DEATH
-checkenemy = collision_rectangle(x - sprite_width/3, y - sprite_height/3, x + sprite_width/3, y + sprite_height/3, objEnemy, false, false)
+#endregion
+#region UpEnemy
+checkenemy = collision_rectangle(x - sprite_width/3, y - sprite_height/3, x + sprite_width/3, y + sprite_height/3, objUpEnemy, false, false)
 if checkenemy != noone {
 	if(!spawnprotection) {
 		if checkenemy.y < y - sprite_height/3 {
@@ -35,8 +35,17 @@ if checkenemy != noone {
 		}
 	}
 }
-
-// GROUND COLLISIONS
+#endregion
+#region SpikeBall
+checkenemy = collision_rectangle(x - sprite_width/3, y - sprite_height/3, x + sprite_width/3, y + sprite_height/3, objSpikeBall, false, false)
+if checkenemy != noone {
+	if(!spawnprotection) {
+		instance_destroy()
+		global.PLAYERLIVES -= 1
+	}
+}
+#endregion
+#region GROUND COLLISIONS
 
 checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y+sprite_height/2, objPlatform, false, false);
 if (checkplat != noone) {
@@ -47,13 +56,13 @@ if (checkplat != noone) {
 } else {
 	grounded = false
 }
-
-// SPAWN PROTECTION DISABLE
+#endregion
+#region SPAWN PROTECTION DISABLE
 if (keyboard_check(ord("A")) or keyboard_check(ord("W")) or keyboard_check(ord("D"))) and spawnprotection {
 	alarm[1] = 1
 }
-
-// MOVE
+#endregion
+#region MOVE
 
 if keyboard_check_pressed(ord("A")) and multiplier > -multicap {
 	multiplier -= multistep
@@ -83,8 +92,8 @@ x += horizspeed * multiplier
 if multiplier == 0 {
 	sprite_set_speed(0, 0, spritespeed_framespersecond)
 }
-
-// FLAP
+#endregion
+#region
 
 if keyboard_check_pressed(ord("W")) {
 	if grounded {
@@ -96,24 +105,24 @@ if keyboard_check_pressed(ord("W")) {
 		}
 	}
 }
-
-// BONK (LEFT)
+#endregion
+#region BONK (LEFT)
 
 checkplat = collision_rectangle(x, y - sprite_height/3, x - sprite_height/3, y + sprite_height/3, objPlatform, false, false)
 if checkplat != noone and multiplier < 0 {
 	x = checkplat.x + checkplat.sprite_width/2 + sprite_width/2;
 	multiplier *= -1;
 }
-
-// BONK (RIGHT)
+#endregion
+#region BONK (RIGHT)
 
 checkplat = collision_rectangle(x, y - sprite_height/3, x + sprite_height/3, y + sprite_height/3, objPlatform, false, false)
 if checkplat != noone and multiplier > 0 {
 	x = checkplat.x - checkplat.sprite_width/2 - sprite_width/2;
 	multiplier *= -1;
 }
-
-// BONK (UP)
+#endregion
+#region BONK (UP)
 
 checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y-sprite_height/2, objPlatform, false, false);
 if checkplat != noone {
@@ -126,8 +135,8 @@ if y < sprite_height/2 {
 	grav = -grav
 	fallspeed = -fallspeed
 }
-
-// GRAVITY
+#endregion
+#region GRAVITY
 
 if !grounded {
 	if grav < gravstart {
@@ -136,3 +145,4 @@ if !grounded {
 	y += fallspeed
 	fallspeed += grav
 }
+#endregion
