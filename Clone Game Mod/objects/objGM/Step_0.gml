@@ -10,6 +10,11 @@ if enemyleft == noone and alarm[0] == -2 {
 		instance_destroy(spikeBall);
 		spikeBall = instance_find(objSpikeBall, 0);
 	}
+	var marshmallow = instance_find(objMarshmallow, 0);
+	while(marshmallow != noone) {
+		instance_destroy(marshmallow);
+		marshmallow = instance_find(objMarshmallow, 0);
+	}
 }
 
 if global.PLAYERLIVES <= 0 and alarm[1] == -2 {

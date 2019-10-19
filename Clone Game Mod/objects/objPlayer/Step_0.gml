@@ -45,6 +45,25 @@ if checkenemy != noone {
 	}
 }
 #endregion
+#region Marshmallow
+checkenemy = collision_rectangle(x - sprite_width/3, y - sprite_height/3, x + sprite_width/3, y + sprite_height/3, objMarshmallow, false, false)
+if checkenemy != noone {
+	fallspeed *= - 1;
+	multiplier *= -1;
+	checkenemy.fallspeed *= -1;
+	checkenemy.horizspeed *= -1;
+	if(x > checkenemy.x) {
+		x = checkenemy.x + checkenemy.sprite_width/2 + sprite_width/2;
+	} else if(x < checkenemy.x){
+		x = checkenemy.x - checkenemy.sprite_width/2 - sprite_width/2;
+	}
+	if(y > checkenemy.y) {
+		y = checkenemy.y + checkenemy.sprite_height/2 + sprite_height/2;
+	} else if(y < checkenemy.y){
+		x = checkenemy.y - checkenemy.sprite_height/2 - sprite_height/2;
+	}
+}
+#endregion
 #region GROUND COLLISIONS
 
 checkplat = collision_rectangle(x-sprite_width/3, y, x+sprite_width/3, y+sprite_height/2, objPlatform, false, false);
@@ -93,7 +112,7 @@ if multiplier == 0 {
 	sprite_set_speed(0, 0, spritespeed_framespersecond)
 }
 #endregion
-#region
+#region JUMP
 
 if keyboard_check_pressed(ord("W")) {
 	if grounded {
