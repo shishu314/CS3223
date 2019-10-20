@@ -1,7 +1,7 @@
 if midspawncount < global.ENEMYCOUNT {
 	randomize()
 	randomspawn = global.SPAWNERS[irandom(2)]
-	var randInt = irandom(5);
+	var randInt = irandom(7);
 	if(randInt == 0 ){
 		instance_create_depth(randomspawn.x, randomspawn.y, 1, objSpikeBall)
 	} else if(randInt == 1){
